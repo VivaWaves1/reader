@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #fff;
+  --fg: #111;
+
+  --bg2: #bbb;
+  --fg2: #333;
+
+  --accent: #0070cc; /* hsl(207, 100%, 40%) */
+  --accent-hl: #003866; /* hsl(207, 100%, 20%) */
+
+  --error: #ff9400;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #222;
+    --fg: #eee;
+
+    --bg2: #444;
+    --fg2: #bbb;
+
+    --accent: #33a3ff; /* hsl(207, 100%, 60%) */
+    --accent-hl: #99d1ff; /* hsl(207, 100%, 80%) */
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0.5rem;
+
+  background: var(--bg);
+  color: var(--fg);
+
+  font-family: 'Noto Sans', 'Cantarell', 'Roboto', system-ui, sans-serif;
+  font-size: 1.1rem;
+}
+
+main {
+  max-width: 50rem;
+  width: 100%;
+  margin: auto;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.25rem;
+}
+
+.button {
+  padding: 0.25rem 0.75rem;
+
+  border: 0.125rem solid var(--accent);
+  border-radius: 0.25rem;
+
+  background: var(--bg);
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 1rem;
+
+  cursor: pointer;
+}
+.button.secondary {
+  border-color: var(--bg2);
+}
+.button:hover {
+  background: var(--bg2);
+  color: var(--fg);
+}
+
+a {
+  text-decoration: none;
+}
